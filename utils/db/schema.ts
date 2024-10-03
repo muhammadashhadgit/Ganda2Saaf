@@ -18,7 +18,7 @@ export const Users = pgTable("users", {
 
 export const Reports = pgTable("reports", {
   id: serial("id").primaryKey(),
-  userID: integer("user_id")
+  userId: integer("user_id")
     .references(() => Users.id)
     .notNull(),
   location: text("location").notNull(),
